@@ -1,0 +1,32 @@
+CREATE TYPE [LOTR].[uttLOTR_Card_API_Response] AS TABLE
+(
+[response] [nvarchar] (max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[result] [nvarchar] (max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[packCode] [varchar] (25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[packName] [varchar] (25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[typeCode] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[typeName] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[sphereCode] [varchar] (16) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[sphereName] [varchar] (16) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[position] [int] NULL,
+[code] [varchar] (6) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[cardName] [varchar] (32) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[traits] [varchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[cardText] [varchar] (512) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[flavor] [varchar] (512) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[isUnique] [bit] NULL,
+[Cost] [varchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[threat] [int] NULL,
+[willpower] [int] NULL,
+[attack] [int] NULL,
+[defense] [int] NULL,
+[health] [int] NULL,
+[quantity] [int] NULL,
+[deckLimit] [int] NULL,
+[illustrator] [varchar] (32) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[octgnid] [varchar] (40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[hasErrata] [bit] NULL,
+[locationURL] [varchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[imageSource] [varchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+GO
