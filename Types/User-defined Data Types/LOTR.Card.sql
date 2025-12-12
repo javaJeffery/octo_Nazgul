@@ -1,6 +1,5 @@
-CREATE TABLE [LOTR].[Card]
+CREATE TYPE [LOTR].[Card] AS TABLE
 (
-[CardID] [int] NOT NULL IDENTITY(1, 1),
 [PackCD] [int] NULL,
 [CardTypeCD] [int] NULL,
 [SphereCD] [int] NULL,
@@ -15,13 +14,5 @@ CREATE TABLE [LOTR].[Card]
 [HasErrata] [bit] NULL,
 [LocationURL] [varchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [ImageSource] [varchar] (128) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
-) ON [PRIMARY]
-GO
-ALTER TABLE [LOTR].[Card] ADD CONSTRAINT [PK__Card__55FECD8EFE467F81] PRIMARY KEY CLUSTERED ([CardID]) ON [PRIMARY]
-GO
-ALTER TABLE [LOTR].[Card] ADD CONSTRAINT [FK__Card__CardTypeCD__6754599E] FOREIGN KEY ([CardTypeCD]) REFERENCES [Common].[code] ([CodeID])
-GO
-ALTER TABLE [LOTR].[Card] ADD CONSTRAINT [FK__Card__PackCD__68487DD7] FOREIGN KEY ([PackCD]) REFERENCES [Common].[code] ([CodeID])
-GO
-ALTER TABLE [LOTR].[Card] ADD CONSTRAINT [FK__Card__SphereCD__693CA210] FOREIGN KEY ([SphereCD]) REFERENCES [Common].[code] ([CodeID])
+)
 GO
