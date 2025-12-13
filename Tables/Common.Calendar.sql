@@ -12,7 +12,8 @@ CREATE TABLE [Common].[Calendar]
 [YearFirstMonday] [date] NULL,
 [YearLastFriday] [date] NULL,
 [MonthFirstMonday] [date] NULL,
-[MonthLastFriday] [date] NULL
+[MonthLastFriday] [date] NULL,
+[RowVer] [timestamp] NOT NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [Common].[Calendar] ADD CONSTRAINT [PK__Calendar__52A928460B9E1B2D] PRIMARY KEY CLUSTERED ([RataDieDate]) ON [PRIMARY]
