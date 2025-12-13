@@ -1,0 +1,14 @@
+CREATE TABLE [LOTR].[DeckSideboard]
+(
+[DeckSideboardID] [int] NOT NULL IDENTITY(1, 1),
+[DeckID] [int] NULL,
+[CardID] [int] NULL,
+[RowVer] [timestamp] NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [LOTR].[DeckSideboard] ADD CONSTRAINT [PK__DeckSide__CC8F3705C86FC2BB] PRIMARY KEY CLUSTERED ([DeckSideboardID]) ON [PRIMARY]
+GO
+ALTER TABLE [LOTR].[DeckSideboard] ADD CONSTRAINT [FK__DeckSideb__CardI__17036CC0] FOREIGN KEY ([CardID]) REFERENCES [LOTR].[Card] ([CardID])
+GO
+ALTER TABLE [LOTR].[DeckSideboard] ADD CONSTRAINT [FK__DeckSideb__DeckI__160F4887] FOREIGN KEY ([DeckID]) REFERENCES [LOTR].[Deck] ([DeckID])
+GO
