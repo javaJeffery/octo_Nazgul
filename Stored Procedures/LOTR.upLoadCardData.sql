@@ -14,7 +14,7 @@ GO
 --============================================================================
 -- 12/12/2025	J.Kirkland	Initial Revision
 --============================================================================
-CREATE   PROCEDURE [LOTR].[upsLoadCardData] (
+CREATE     PROCEDURE [LOTR].[upLoadCardData] (
     @set VARCHAR(16)
 )
 AS
